@@ -25,6 +25,18 @@ public class Topic {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Resource> resources = new ArrayList<>();
 
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
+    }
+
+    public List<Subscription> getSubscriptions() {
+
+        return subscriptions;
+    }
+
+    @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL)
+    List<Subscription> subscriptions = new ArrayList<>();
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = true)
     Visibility visibility;

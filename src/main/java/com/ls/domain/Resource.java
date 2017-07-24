@@ -21,12 +21,10 @@ public class Resource {
     @Column(nullable = true)
     String filepath;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     User createdBy;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "topic_id")
     Topic topic;

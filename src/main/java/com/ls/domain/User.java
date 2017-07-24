@@ -29,6 +29,9 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Resource> resources = new ArrayList<>();
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Subscription> subscriptions = new ArrayList<>();
+
     @Column(nullable = false)
     private String email;
 
@@ -147,5 +150,13 @@ public class User {
 
     public void setResources(List<Resource> resources) {
         this.resources = resources;
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 }

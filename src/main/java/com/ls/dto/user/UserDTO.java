@@ -11,7 +11,7 @@ public class UserDTO {
     public String lastName;
     public Boolean isAdmin = false;
     public Boolean isActive = true;
-    public String profilePhoto;
+    public byte[] profilePhoto;
     public String confirmPassword;
 
     public void setEmail(String email) {
@@ -46,7 +46,7 @@ public class UserDTO {
         isActive = active;
     }
 
-    public void setProfilePhoto(String profilePhoto) {
+    public void setProfilePhoto(byte[] profilePhoto) {
         this.profilePhoto = profilePhoto;
     }
 
@@ -87,7 +87,7 @@ public class UserDTO {
         return isActive;
     }
 
-    public String getProfilePhoto() {
+    public byte[] getProfilePhoto() {
         return profilePhoto;
     }
 

@@ -30,12 +30,12 @@
                     </div>
 
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" name="loginForm">
+                        <form class="form-horizontal" th:action="@{/login}" name="loginForm">
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Username:</label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" name="username" class="form-control" id="username"
+                                    <input type="text" id="loginUsername" class="form-control"
                                            placeholder="Enter Username"/>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@
                                 <label class="control-label col-sm-3">Password:</label>
 
                                 <div class="col-sm-9">
-                                    <input name="password" type="password" class="form-control" id="password"
+                                    <input id="loginPassword" type="password" class="form-control"
                                            placeholder="Enter Password"/>
                                 </div>
                             </div>

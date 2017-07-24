@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+<head>
+    <title>Error Page</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="container-fluid">
+        <div class="col-lg-6">
+            <div class="panel-body" th:object="${loggedInUser}">
+                <span th:text="|Hello ${loggedInUser.username}|"></span>
+                <span th:text="|Hello ${loggedInUser.firstName}|"></span>
+                <span th:text="|Hello ${loggedInUser.lastName}|"></span>
+                <span th:text="|Hello ${loggedInUser.email}|"></span>
+                <!--<form class="form-horizontal" controller="login" action="register" name="registerForm">-->
+                Famous Topics Will Come Here
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
