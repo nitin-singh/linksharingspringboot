@@ -42,11 +42,11 @@ public class BootstrapService implements InitializingBean {
     @Transactional()
     public void afterPropertiesSet() throws Exception {
         LOG.info("----------------------LINKSHARING BOOTSTRAP STARTED----------------------");
-//        createUserData();
-//        createUserTopics();
-//        createResourcesForTopics();
-//        createSubscriptionData();
-//        subscribeToAllTopics();
+        createUserData();
+        createUserTopics();
+        createResourcesForTopics();
+        createSubscriptionData();
+        subscribeToAllTopics();
         listAllTopicNamesOfCreatedTopics();
         listAllSubscribersOfEachTopic();
         LOG.info("----------------------LINKSHARING BOOTSTRAP COMPLETE---------------------");
