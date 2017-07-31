@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>User Registration Page</h1>
+        <form action="#" th:action="@{/user/register}" th:object="${user}" method="post">
+            <div class="form-group">
+                <label class="control-label col-sm-3">First name *</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="First Name"
+                           th:field="*{name}"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Last name *</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="Last Name"
+                           th:field="*{lastName}"/>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="email">Email *</label>
+
+                <div class="col-sm-9">
+                    <input typeof="text" type="email" class="form-control" placeholder="Email Id"
+                           th:field="*{email}"/>
+
+                </div>
+            </div>
+
+           <!-- <div class="form-group">
+                <label class="control-label col-sm-3" for="email">Username *</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" placeholder="User Name"
+                           th:field="*{username}"/>
+
+                </div>
+            </div>-->
+
+            <div class="form-group">
+                <label class="control-label col-sm-3">Password:</label>
+
+                <div class="col-sm-9">
+                    <input type="password" id="password" class="form-control" placeholder="Password"
+                           th:field="*{password}"/>
+
+                </div>
+            </div>
+
+            <!--<div class="form-group">
+                <label class="control-label col-sm-3">Confirm Password:</label>
+
+                <div class="col-sm-9">
+                    <input type="password" class="form-control" placeholder="Password"
+                           th:field="*{confirmPassword}"/>
+                </div>
+            </div>-->
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                    <input type="submit" value="Submit"/><input type="reset" value="Reset"/>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
