@@ -10,16 +10,23 @@
 
         <footer>
             <!--<div class="text-center">-->
-                © 2017 nitin.rajput20@gmail.com
+            © 2017 nitin.rajput20@gmail.com
                 <span sec:authorize="isAuthenticated()">
                 | Logged user: <span sec:authentication="name"></span> |
                 Roles: <span sec:authentication="principal.authorities"></span> |
                 <a th:href="@{/logout}">Sign Out</a>
             </span>
             <!--</div>-->
-
+            <script type="text/javascript"
+                    src="js/jquery-3.2.1.min.js"></script>
             <script type="text/javascript"
                     src="js/bootstrap.min.js"></script>
+            <script type="text/javascript"
+                    src="js/home.js"></script>
+            <script type="text/javascript" src="js/datatable/dataTables.bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/datatable/dataTables.jqueryui.min.js"></script>
+            <script type="text/javascript" src="js/datatable/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" src="js/datatable/jquery.validate.min.js"></script>
 
         </footer>
     </div>
